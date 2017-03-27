@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_actions"
+        android:background="@color/pureWhite"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_close_reset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/ic_close_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/reset_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Reset all"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+                <View
+                    android:id="@+id/border_below_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_price_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pricerange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Price Range"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_min_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_pricerange"
+                        android:layout_marginLeft="20dp"
+                        android:text="Rs 0"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/text_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_pricerange"
+                        android:layout_toRightOf="@+id/tv_min_price"
+                        android:text=" - "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_max_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_pricerange"
+                        android:layout_toRightOf="@+id/text_to"
+                        android:text="Rs 5000000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/seekbar_placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_min_price"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/border_below_price_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_choose_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Brand"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/green_rounded_corners"
+                        android:text="All"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/border_below_choose_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_choose_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Model"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/green_rounded_corners"
+                        android:text="All"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_choose_body_type"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/text_body_type"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginBottom="12dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="Model Year"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_body_type"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:background="@drawable/green_rounded_corners"-->
+                <!--android:text="All"-->
+                <!--android:textColor="@color/greenColor"-->
+                <!--android:textSize="14sp" />-->
+                <!--</RelativeLayout>-->
+
+                <View
+                    android:id="@+id/border_below_choose_body_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_sort_by"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_sort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Sort by"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/green_rounded_corners"
+                        android:text="None"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider" />
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="@color/colorAccent" />-->
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_choose_fuel"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--android:layout_below="@+id/border_below_choose_body_type"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/text_fuel"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginBottom="12dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="Fuel Type"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="18sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_fuel_type"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:background="@drawable/green_rounded_corners"-->
+                <!--android:text="All"-->
+                <!--android:textColor="@color/colorPrimary"-->
+                <!--android:textSize="14sp" />-->
+                <!--</RelativeLayout>-->
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pureWhite">
+
+        <View
+            android:id="@+id/border_below_select_item"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <in.co.opensoftlab.yourstore.views.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mrl_rippleAlpha="0.1"
+            app:mrl_rippleColor="@color/pureWhite"
+            app:mrl_rippleOverlay="true">
+
+            <Button
+                android:id="@+id/b_see_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/red_rounded_corners"
+                android:text="See Results"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </in.co.opensoftlab.yourstore.views.MaterialRippleLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+def FB_LOGIN_PROTOCOL_SCHEME = '"' + fb_login_protocol_scheme + '"' ?: '"FB LOGIN PROTOCOL SCHEME"';
+def FB_APP_ID = '"' + facebook_app_id + '"' ?: '"FB APP ID"';
+def WEB_CLIENT_ID = '"' + web_client_id + '"' ?: '"WEB CLIENT ID"';
+def API_KEY = '"' + api_key + '"' ?: '"API KEY"';
+def STORAGE_URL = '"' + storage_url + '"' ?: '"STORAGE URL"';
+def ANALYTICS = '"' + analytics_token + '"' ?: '"ANALYTICS TOKEN"';
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'kisslove'
+            keyPassword '#Developsoft'
+            storeFile file('C:/Users/dewangankisslove/autoroom.jks')
+            storePassword '#Developautoroom'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "in.co.opensoftlab.yourstore"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        android.buildTypes.each { type ->
+            type.buildConfigField 'String', 'FB_LOGIN_PROTOCOL_SCHEME', FB_LOGIN_PROTOCOL_SCHEME
+            type.buildConfigField 'String', 'FB_APP_ID', FB_APP_ID
+            type.buildConfigField 'String', 'WEB_CLIENT_ID', WEB_CLIENT_ID
+            type.buildConfigField 'String', 'API_KEY', API_KEY
+            type.buildConfigField 'String', 'STORAGE_URL', STORAGE_URL
+            type.buildConfigField 'String', 'ANALYTICS_TOKEN', ANALYTICS
+        }
+    }
+    productFlavors {
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.android.support:cardview-v7:25.3.0'
+    compile 'com.android.support:recyclerview-v7:25.3.0'
+    compile 'com.google.firebase:firebase-auth:10.2.1'
+    compile 'com.google.android.gms:play-services-auth:10.2.1'
+    compile 'com.google.android.gms:play-services-maps:10.2.1'
+    compile 'com.google.android.gms:play-services-location:10.2.1'
+    compile 'com.google.android.gms:play-services-places:10.2.1'
+    compile 'com.google.firebase:firebase-database:10.2.1'
+    compile 'com.google.firebase:firebase-invites:10.2.1'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.android.support:support-v13:25.3.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.wdullaer:materialdatetimepicker:3.0.0'
+    compile 'com.google.firebase:firebase-storage:10.2.1'
+    compile 'com.firebase:geofire-android:2.1.1'
+    compile 'com.google.firebase:firebase-messaging:10.2.1'
+    compile 'com.wang.avi:library:2.1.3'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+    compile 'org.adw.library:discrete-seekbar:1.0.1'
+    compile 'com.mixpanel.android:mixpanel-android:4.+'
+}
+
+apply plugin: 'com.google.gms.google-services'

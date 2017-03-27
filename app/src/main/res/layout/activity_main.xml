@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite"
+    android:orientation="vertical"
+    tools:context="in.co.opensoftlab.yourstore.activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation_buyer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:elevation="8dp"
+            app:itemBackground="@color/pureWhite"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:menu="@menu/bottom_navigation_buyer" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation_seller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:elevation="8dp"
+            app:itemBackground="@color/pureWhite"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:menu="@menu/bottom_navigation_seller" />
+
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar_buyer"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="1.0">-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_explore"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="14dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:tint="@color/black"-->
+        <!--android:src="@drawable/icon_explore" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:text="Explore"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_saved"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:src="@drawable/icon_favourite" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Wishlist"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_buyer_inbox"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:src="@drawable/icon_chat" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Chats"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_buyer_orders"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="14dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:src="@drawable/icon_notification" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Notification"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_profile"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="18dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:src="@drawable/icon_account" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Account"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.Toolbar>-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar_seller"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="1.0">-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_seller_inbox"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:src="@drawable/icon_chat" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:text="Chats"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_seller_orders"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="14dp"-->
+        <!--android:paddingTop="4dp"-->
+        <!--android:src="@drawable/icon_notification" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Notification"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_listings"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:src="@drawable/icon_listings" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Listings"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_stats"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="18dp"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:src="@drawable/icon_stats" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Stats"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/tab_profile2"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.20">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="48dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:paddingBottom="18dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:src="@drawable/icon_account" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:text="Account"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="10sp" />-->
+        <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.Toolbar>-->
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/landing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_toolbar"
+        android:background="@color/pureWhite"></FrameLayout>
+</RelativeLayout>

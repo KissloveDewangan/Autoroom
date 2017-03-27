@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pureWhite"
+    android:orientation="vertical">
+
+    <in.co.opensoftlab.yourstore.views.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrl_rippleColor="@color/primary_light"
+        app:mrl_rippleOverlay="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_snap"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_car"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="24dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/icon_car"-->
+            <!--android:tint="@color/secondary_text" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Take a Snapshot"
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </in.co.opensoftlab.yourstore.views.MaterialRippleLayout>
+
+    <in.co.opensoftlab.yourstore.views.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrl_rippleColor="@color/primary_light"
+        app:mrl_rippleOverlay="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_upload"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_bike"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="24dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/icon_bike"-->
+            <!--android:tint="@color/secondary_text" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Upload from Gallery"
+                android:textColor="@color/secondary_text"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </in.co.opensoftlab.yourstore.views.MaterialRippleLayout>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:background="@drawable/black_border"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="wrap_content"
+        android:layout_height="142dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="1dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:text="Samsung Grand 2 cover by XYZ| Latest fashion| Exclusive offers| Get at best deal"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/iv_currency_symbol"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1dp"
+            android:src="@drawable/rupee_symbol" />
+
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/iv_currency_symbol"
+            android:text="200"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

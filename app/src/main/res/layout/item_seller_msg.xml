@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/chat_message_bg"
+        android:text="12/07/14"
+        android:textColor="#61000000"
+        android:textSize="10sp" />
+
+    <!--<in.co.opensoftlab.yourstore.views.ChatMessageView-->
+    <!--android:id="@+id/chatMessageView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="48dp"-->
+    <!--app:cmv_arrowGravity="start"-->
+    <!--app:cmv_arrowMargin="0dp"-->
+    <!--app:cmv_arrowPosition="left"-->
+    <!--app:cmv_backgroundColor="@color/greenColor"-->
+    <!--app:cmv_backgroundColorPressed="@color/greenColor"-->
+    <!--app:cmv_contentPadding="0dp"-->
+    <!--app:cmv_cornerRadius="2dp"-->
+    <!--app:cmv_showArrow="true">-->
+
+    <LinearLayout
+        android:id="@+id/chatMessageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/seller_message_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pureWhite"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#80FFFFFF"
+            android:textSize="8sp" />
+    </LinearLayout>
+    <!--</in.co.opensoftlab.yourstore.views.ChatMessageView>-->
+</LinearLayout>

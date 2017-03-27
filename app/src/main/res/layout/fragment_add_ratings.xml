@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_next"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="top"
+            android:progress="11"
+            android:progressDrawable="@drawable/custom_progress_bar_horizontal" />
+
+        <TextView
+            android:id="@+id/tv_que_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="48dp"
+            android:text="Question 1"
+            android:textColor="#61000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_que"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp"
+            android:text="How would you rate your car engine condition?"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Excellent"
+            android:textColor="@color/highlightColor"
+            android:textSize="24sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:numStars="5"
+            android:stepSize="1.0" />
+
+
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Engine"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_engine"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="AC"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_ac"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Brakes"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_brakes"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Suspension"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_suspension"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Battery"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_battery"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Tyres"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_tyres"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Interior"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_interior"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Exterior"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_exterior"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Seats"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="16dp" />-->
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/rb_seats"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:numStars="7"-->
+        <!--android:stepSize="1.0" />-->
+        <!--</LinearLayout>-->
+        <!--</ScrollView>-->
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/whiteShade" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!--<in.co.opensoftlab.yourstore.views.MaterialRippleLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.5"-->
+            <!--app:mrl_rippleAlpha="0.1"-->
+            <!--app:mrl_rippleColor="@color/pureWhite"-->
+            <!--app:mrl_rippleOverlay="true">-->
+
+            <Button
+                android:id="@+id/b_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/red_rounded_corners"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite"
+                android:textSize="14sp" />
+            <!--</in.co.opensoftlab.yourstore.views.MaterialRippleLayout>-->
+
+            <!--<in.co.opensoftlab.yourstore.views.MaterialRippleLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.5"-->
+            <!--app:mrl_rippleAlpha="0.1"-->
+            <!--app:mrl_rippleColor="@color/pureWhite"-->
+            <!--app:mrl_rippleOverlay="true">-->
+
+            <Button
+                android:id="@+id/b_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/red_rounded_corners"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite"
+                android:textSize="14sp" />
+            <!--</in.co.opensoftlab.yourstore.views.MaterialRippleLayout>-->
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

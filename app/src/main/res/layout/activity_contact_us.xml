@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_submit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/primary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:id="@+id/rl_close_reset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_arrow_back_white_24dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/iv_back"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Contact Us"
+                        android:textColor="@color/pureWhite"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/tv_purpose"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_square_corner"
+                android:gravity="center_vertical"
+                android:text="Select Purpose"
+                android:textColor="@color/blackshade1"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_square_corner"
+                android:gravity="top"
+                android:hint="Your message here"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColor="@color/lightBlack"
+                android:textColorHint="@color/blackshade1"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_square_corner"
+                android:gravity="center_vertical"
+                android:hint="Email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/lightBlack"
+                android:textColorHint="@color/blackshade1"
+                android:textSize="16sp" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="42dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Or call us at"-->
+            <!--android:textColor="@color/lightBlack"-->
+            <!--android:textSize="12sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_customer_care"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="+91-XXXX-XXXX-XX"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="18sp" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<View-->
+    <!--android:id="@+id/b_border"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_above="@+id/b_submit"-->
+    <!--android:background="@color/colorAccent" />-->
+
+    <in.co.opensoftlab.yourstore.views.MaterialRippleLayout
+        android:id="@+id/layout_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:mrl_rippleAlpha="0.2"
+        app:mrl_rippleColor="@color/pureWhite"
+        app:mrl_rippleOverlay="true">
+
+        <Button
+            android:id="@+id/b_submit"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+
+            android:background="@color/highlightColor"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/pureWhite"
+            android:textSize="18sp" />
+    </in.co.opensoftlab.yourstore.views.MaterialRippleLayout>
+</RelativeLayout>

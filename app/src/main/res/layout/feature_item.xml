@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+    <ImageView
+        android:id="@+id/iv_attr"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_remove_red_eye_black_24dp"
+        android:tint="#61000000" />
+
+    <TextView
+        android:id="@+id/tv_val"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_attr"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:maxLines="3"
+        android:text="50000 kms driven"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp" />
+</RelativeLayout>

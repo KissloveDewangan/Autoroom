@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_next"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:id="@+id/rl_close_reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_close"
+                    android:text="Car Details"
+                    android:textColor="@color/pureWhite"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="12dp"
+                    android:tint="@color/pureWhite"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="12dp"
+                    android:src="@drawable/ic_close_black_24dp" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_add"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:src="@drawable/ic_add_black_24dp" />-->
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <!--<View-->
+        <!--android:id="@+id/border_below_toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/divider" />-->
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Brand:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_brand"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="Select Brand"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Model Name:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/et_model_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="Select Model"
+                        android:maxLines="1"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Variant Name:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_variant_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="Type variant name"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Model Year:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_model_year"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="2014"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Body Type:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_body_type"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="Select Body Type"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Driven (in kms):"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_driven_distance"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="50000"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Selling Price (in Rs):"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_price"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:hint="5,00,000"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Fuel Type:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fuel_type"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="Select Fuel Type"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Transmission:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_transmission"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="Select Transmission"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Engine (cc):"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_engine"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="1248"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Mileage (in kmpl):"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_mileage"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="25"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Seating:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_seats"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="5"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Fuel Tank Capacity (in litre):"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_tank_capacity"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="42"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:text="Color:"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_color"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/rounded_white_edittext"
+                        android:gravity="center_vertical"
+                        android:hint="Black"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/secondary_text"
+                        android:textColorHint="@color/blackshade1"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <in.co.opensoftlab.yourstore.views.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mrl_rippleAlpha="0.1"
+            app:mrl_rippleColor="@color/pureWhite"
+            app:mrl_rippleOverlay="true">
+
+            <Button
+                android:id="@+id/b_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/red_rounded_corners"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite"
+                android:textSize="14sp" />
+        </in.co.opensoftlab.yourstore.views.MaterialRippleLayout>
+    </RelativeLayout>
+</RelativeLayout>

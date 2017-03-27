@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="primary">#607D8B</color>-->
+    <color name="primary">#FE9700</color>
+    <!--<color name="primaryOpacity">#BF607D8B</color>-->
+    <color name="primaryOpacity">#61000000</color>
+    <color name="primary_dark">#F57C00</color>
+    <!--<color name="primary_dark">#455A64</color>-->
+    <color name="primary_light">#CFD8DC</color>
+    <color name="accent">#9D9D9D</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="dark_black">#61000000</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#1F000000</color>
+    <color name="layout_bg_color">#DDDDDD</color>
+    <color name="pureWhite">#FFF</color>
+    <color name="white_38">#61FFFFFF</color>
+    <color name="dullWhite">#FAFAFA</color>
+    <color name="whiteShade">#E0E0E0</color>
+    <color name="black">#212121</color>
+    <color name="black_38">#61000000</color>
+    <color name="opacity_black">#8C212121</color>
+    <color name="lightBlack">#424242</color>
+    <color name="highlightColor2">#F44336</color>
+    <color name="highlightColor">#FE9700</color>
+    <!--<color name="highlightColor">#FF5A5F</color>-->
+    <color name="greenColor">#00A69C</color>
+
+    <color name="errorColor">#DD2C00</color>
+    <color name="linkColor">#4285F4</color>
+    <color name="linkColor2">#008EB7</color>
+    <color name="blackshade1">#BDBDBD</color>
+    <color name="blackshade2">#9E9E9E</color>
+
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="view_divider_color">#BABABA</color>
+    <color name="view_divider_color_2">#DADADA</color>
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/pureWhite">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/selected_filters"
+                android:layout_width="match_parent"
+                android:layout_above="@+id/border"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/border"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/whiteShade" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <include layout="@layout/recycler_view" />
+
+        </ScrollView>
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        fab:fab_addButtonColorNormal="@color/highlightColor"
+        fab:fab_addButtonColorPressed="@color/highlightColor2"
+        fab:fab_addButtonPlusIconColor="@color/pureWhite"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_change_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/highlightColor"
+            fab:fab_colorPressed="@color/highlightColor2"
+            fab:fab_icon="@drawable/ic_edit_location_white_24dp"
+            fab:fab_size="mini"
+            fab:fab_title="Change Location" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_filter_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/highlightColor"
+            fab:fab_colorPressed="@color/highlightColor2"
+            fab:fab_icon="@drawable/ic_filter_list_white_24dp"
+            fab:fab_size="mini"
+            fab:fab_title="Filter" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</FrameLayout>

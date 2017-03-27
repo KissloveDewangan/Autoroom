@@ -1,0 +1,177 @@
+<resources>
+    <string name="app_name">Autoroom</string>
+    <string name="loading">Loading...</string>
+    <string name="auth_failed">Authentication Failed</string>
+
+    <string name="action_favourite">Favourite</string>
+    <string name="action_share">Share</string>
+    <string name="headline_product_specification">Product Specification/Feature</string>
+
+    <string name="h_electronics">Home Appliances</string>
+    <string name="k_appliances">Kitchen Appliances</string>
+
+
+    <string name="automatic">Automatic</string>
+    <string name="manual">Manual</string>
+
+
+    <string name="hatchback">HatchBack</string>
+    <string name="sedan">Sedan</string>
+    <string name="suv">SUV</string>
+    <string name="luxury">Luxury</string>
+    <string name="muv">MUV</string>
+    <string name="minivan">Minivan</string>
+    <string name="convertible">Convertible</string>
+    <string name="coupe">Coupe</string>
+
+
+    <string name="individual">Individual</string>
+    <string name="dealer">Dealer</string>
+
+
+    <string name="first_owner">First Owner</string>
+    <string name="second_owner">Second Owner</string>
+    <string name="third_owner">Third Owner</string>
+    <string name="fourth_owner">Fourth Owner</string>
+
+
+    <string name="sort_price_low">Price - Low to High</string>
+    <string name="sort_price_high">Price - High to Low</string>
+    <string name="sort_model_year">Model Year - Latest to Old</string>
+    <string name="sort_distance">KM Driven - Low to High</string>
+
+
+    <string name="ccn_engine">Engine</string>
+    <string name="ccn_ac">AC</string>
+    <string name="ccn_brakes">Brakes</string>
+    <string name="ccn_suspension">Suspension</string>
+    <string name="ccn_battery">Battery</string>
+    <string name="ccn_tyre">Tyres</string>
+    <string name="ccn_interior">Interior</string>
+    <string name="ccn_exterior">Exterior</string>
+    <string name="ccn_seats">Seats</string>
+
+
+    <string name="bcn_engine">Engine</string>
+    <string name="bcn_brakes">Brakes</string>
+    <string name="bcn_suspension">Suspension</string>
+    <string name="bcn_tyre">Tyres</string>
+
+
+    <string name="rating_bad">Bad</string>
+    <string name="rating_not_bad">Not bad</string>
+    <string name="rating_avg">Average</string>
+    <string name="rating_good">Good</string>
+    <string name="rating_excellent">Excellent</string>
+
+    <string-array name="ratings">
+        <item>@string/rating_bad</item>
+        <item>@string/rating_not_bad</item>
+        <item>@string/rating_avg</item>
+        <item>@string/rating_good</item>
+        <item>@string/rating_excellent</item>
+    </string-array>
+
+    <string-array name="car_condition_name">
+        <item>@string/ccn_engine</item>
+        <item>@string/ccn_ac</item>
+        <item>@string/ccn_brakes</item>
+        <item>@string/ccn_suspension</item>
+        <item>@string/ccn_battery</item>
+        <item>@string/ccn_tyre</item>
+        <item>@string/ccn_interior</item>
+        <item>@string/ccn_exterior</item>
+        <item>@string/ccn_seats</item>
+    </string-array>
+
+    <string-array name="bike_condition_name">
+        <item>@string/bcn_engine</item>
+        <item>@string/bcn_brakes</item>
+        <item>@string/bcn_suspension</item>
+        <item>@string/bcn_tyre</item>
+    </string-array>
+
+    <string-array name="seller_type">
+        <item>@string/individual</item>
+        <item>@string/dealer</item>
+    </string-array>
+
+    <string-array name="owner_no">
+        <item>@string/first_owner</item>
+        <item>@string/second_owner</item>
+        <item>@string/third_owner</item>
+        <item>@string/fourth_owner</item>
+    </string-array>
+
+
+    <string name="petrol">Petrol</string>
+    <string name="diesel">Diesel</string>
+    <string name="cng">CNG</string>
+    <string name="lpg">LPG</string>
+    <string name="electric">Electric</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string-array name="category_name">
+        <item>@string/h_electronics</item>
+        <item>@string/k_appliances</item>
+    </string-array>
+
+    <string-array name="transmissions">
+        <item>@string/automatic</item>
+        <item>@string/manual</item>
+    </string-array>
+
+    <string-array name="electric_starts">
+        <item>@string/yes</item>
+        <item>@string/no</item>
+    </string-array>
+
+    <string-array name="body_types">
+        <item>@string/hatchback</item>
+        <item>@string/sedan</item>
+        <item>@string/suv</item>
+        <item>@string/luxury</item>
+        <item>@string/muv</item>
+        <item>@string/minivan</item>
+        <item>@string/convertible</item>
+        <item>@string/coupe</item>
+    </string-array>
+
+    <string-array name="fuel_types">
+        <item>@string/petrol</item>
+        <item>@string/diesel</item>
+        <item>@string/cng</item>
+        <item>@string/lpg</item>
+        <item>@string/electric</item>
+    </string-array>
+
+    <string-array name="sort_types">
+        <item>@string/sort_price_low</item>
+        <item>@string/sort_price_high</item>
+        <item>@string/sort_model_year</item>
+        <item>@string/sort_distance</item>
+    </string-array>
+
+    <string name="server_all">all</string>
+    <string name="server_products">products</string>
+    <string name="server_ourdb">ourDB</string>
+    <string name="server_chat">chats</string>
+    <string name="server_msg">messages</string>
+
+    <string name="fb_login_protocol_scheme">fb1289779827727331</string>
+    <string name="facebook_app_id">1289779827727331</string>
+    <string name="api_key">AIzaSyAh7QjKWUkDYfBiyIaEQfX8KeEix82gRJs</string>
+    <string name="text_explore">EXPLORE</string>
+    <string name="text_saved">SAVED</string>
+    <string name="text_inbox">INBOX</string>
+    <string name="text_listings">LISTINGS</string>
+    <string name="text_stats">STATS</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="invitation_title">Autoroom Invites</string>
+    <string name="invitation_message">Hey grab this amazing app!</string>
+    <string name="invitation_deep_link">http://www.autoroom.in</string>
+    <string name="invitation_cta">Invite</string>
+</resources>

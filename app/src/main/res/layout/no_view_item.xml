@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingRight="4dp"
+        android:text="Samsung Galaxy Grand 2"
+        android:textColor="@color/blackshade2"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_total_views"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tr"
+        android:layout_weight="0.2"
+        android:maxLines="2"
+        android:text="320"
+        android:textColor="@color/blackshade2"
+        android:textSize="12sp" />
+</LinearLayout>

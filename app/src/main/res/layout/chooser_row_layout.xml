@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.co.opensoftlab.yourstore.views.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:mrl_rippleAlpha="0.2"
+    app:mrl_rippleColor="@color/black"
+    app:mrl_rippleOverlay="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="BMW"
+            android:textColor="#8A000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+</in.co.opensoftlab.yourstore.views.MaterialRippleLayout>

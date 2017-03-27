@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.co.opensoftlab.yourstore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".YourStoreApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notifications_white_24dp" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/pureWhite" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <activity
+            android:name=".activity.LocationFetching"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.UserSignup"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.UserEmailSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UserSignin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CarFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FilterChooserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProductDescription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChattingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddBikeInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ApprovalPendingProducts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BikeCondition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BikeFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Feedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.SellerProductDescription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.AddProductInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.AddProductImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.CarCondition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.AddSellerLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.SellerChattingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.ContactUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.AboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.BlockedCustomers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.co.opensoftlab.yourstore.activity.EditProfile"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
