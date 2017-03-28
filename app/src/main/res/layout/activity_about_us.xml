@@ -30,7 +30,7 @@
         android:layout_below="@+id/tv_app_name"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:text="Version 1.0.0"
+        android:text="Version 1.0.0.2"
         android:textColor="@color/secondary_text"
         android:textSize="16sp" />
 

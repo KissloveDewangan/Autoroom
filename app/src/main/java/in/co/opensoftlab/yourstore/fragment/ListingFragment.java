@@ -102,6 +102,7 @@ public class ListingFragment extends Fragment implements View.OnClickListener {
         mSeller = FirebaseDatabase.getInstance().getReference("sellers");
         mRecycle = FirebaseDatabase.getInstance().getReference("recycleBin").child(getUserUID()).child("products");
         mGeo = FirebaseDatabase.getInstance().getReference(getResources().getString(R.string.server_products)).child("geoData").child("live");
+        query = mDatabase.orderByChild("sellerId").equalTo(getUserUID());
 
 
         String projectToken = BuildConfig.ANALYTICS_TOKEN;
@@ -119,10 +120,9 @@ public class ListingFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onPause() {
         super.onPause();
-        if (isNetworkConnected()) {
-            if (query != null)
-                query.removeEventListener(valueEventListener);
-        }
+        if (query != null)
+            query.removeEventListener(valueEventListener);
+
     }
 
     @Override
@@ -130,9 +130,13 @@ public class ListingFragment extends Fragment implements View.OnClickListener {
         super.onResume();
         Log.d("onResume", "onResume");
 //        listings.setVisibility(View.VISIBLE);
-        search.setVisibility(View.GONE);
+        if (isNetworkConnected())
+            query.addValueEventListener(valueEventListener);
+    }
 
-        query = mDatabase.orderByChild("sellerId").equalTo(getUserUID());
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -193,15 +197,6 @@ public class ListingFragment extends Fragment implements View.OnClickListener {
                 recyclerView.setVisibility(View.VISIBLE);
             }
         };
-        if (isNetworkConnected())
-            query.addListenerForSingleValueEvent(valueEventListener);
-
-        addProduct.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
@@ -232,6 +227,9 @@ public class ListingFragment extends Fragment implements View.OnClickListener {
         cancelSearch = (ImageView) view.findViewById(R.id.iv_close);
 //        pendingList = (ImageView) view.findViewById(R.id.iv_waiting);
         loadingIndicatorView = (AVLoadingIndicatorView) view.findViewById(R.id.avi);
+
+        search.setVisibility(View.GONE);
+        addProduct.setVisibility(View.VISIBLE);
 
         recyclerView.setVisibility(View.GONE);
         loadingIndicatorView.smoothToShow();

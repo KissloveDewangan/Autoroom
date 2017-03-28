@@ -329,14 +329,6 @@ public class AddProductInfo extends BaseActivity implements OptionPickerDialogFr
             modelName.setError(null);
         }
 
-        String variant = variantName.getText().toString();
-        if (TextUtils.isEmpty(variant)) {
-            variantName.setError("Required.");
-            valid = false;
-        } else {
-            variantName.setError(null);
-        }
-
         String categ = modelYear.getText().toString();
         if (TextUtils.isEmpty(categ)) {
             modelYear.setError("Required.");

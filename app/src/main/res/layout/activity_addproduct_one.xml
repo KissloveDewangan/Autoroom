@@ -152,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="0.4"
-                        android:text="Variant Name:"
+                        android:text="Variant Name (optional):"
                         android:textColor="@color/primary_text"
                         android:textSize="14sp" />
 

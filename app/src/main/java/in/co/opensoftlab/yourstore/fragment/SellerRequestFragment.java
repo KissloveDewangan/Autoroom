@@ -43,8 +43,8 @@ import java.util.List;
 import in.co.opensoftlab.yourstore.R;
 import in.co.opensoftlab.yourstore.adapter.OrderListAdapterSeller;
 import in.co.opensoftlab.yourstore.model.NotificationHistory;
-import in.co.opensoftlab.yourstore.model.NotifyItemSeller;
 import in.co.opensoftlab.yourstore.model.NotificationModel;
+import in.co.opensoftlab.yourstore.model.NotifyItemSeller;
 import in.co.opensoftlab.yourstore.utils.PrefUtils;
 
 /**
@@ -320,7 +320,8 @@ public class SellerRequestFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        mDatabase.removeEventListener(valueEventListener);
+        if (mDatabase != null)
+            mDatabase.removeEventListener(valueEventListener);
     }
 
     @Override
